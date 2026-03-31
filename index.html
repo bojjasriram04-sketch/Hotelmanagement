@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luxury Hotel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+
+
+<!-- Theme Toggle -->
+<button class="theme-btn" onclick="toggleTheme()">🌙</button>
+
+<div class="app">
+  <h1>🏨 Luxury Hotel</h1>
+
+  <!-- Dashboard -->
+  <div class="dashboard">
+    <div>Rooms: <span id="totalRooms">0</span></div>
+    <div>Revenue: ₹<span id="revenue">0</span></div>
+  </div>
+
+  <!-- Booking Form -->
+  <div class="form">
+    <input id="name" placeholder="Guest Name">
+    <input id="room" placeholder="Room No">
+    <select id="type">
+      <option>AC</option>
+      <option>Non-AC</option>
+    </select>
+    <button onclick="bookRoom()">Book</button>
+  </div>
+
+  <!-- Room Cards -->
+  <div class="cards" id="roomList"></div>
+</div>
+
+<!-- Toast -->
+<div id="toast"></div>
+
+<!-- Invoice Modal -->
+<div id="invoice" class="modal">
+  <div class="modal-content">
+    <h2>Invoice</h2>
+    <p id="invoiceText"></p>
+    <button onclick="closeInvoice()">Close</button>
+  </div>
+</div>
+
+<!-- Sound -->
+<audio id="sound" src="https://www.fesliyanstudios.com/play-mp3/387"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
